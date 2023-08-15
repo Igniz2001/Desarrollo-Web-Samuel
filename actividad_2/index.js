@@ -85,3 +85,25 @@ const crearNombreCompleto = (nombre,apellido) => {
 }
 
 crearNombreCompleto(nombre,apellido)
+
+const estudiantes=[]
+
+
+estudiantes.push({"nombre":"Juan",id:123})
+estudiantes.push({"nombre":"Emmanuel",id:1234})
+
+estudiantes.forEach((x) => console.log(x.nombre))
+for(let i= 0; i < estudiantes.length; i++){
+    if(estudiantes[i].nombre == "Emmanuel"){
+        console.log(estudiantes[i].id);
+    }
+}
+const emmanuel = estudiantes.find(x=>x.nombre == "Emmanuel")
+console.log(estudiantes);
+
+const emmanueles = estudiantes.filter(x=>x.nombre == "Emmanuel")
+console.log(estudiantes);
+
+
+estudiantes = estudiantes.map(x=>{return{...x,edad:null}})
+console.log(estudiantes);
